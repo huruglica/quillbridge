@@ -1,0 +1,173 @@
+## ---------------------------------------------------------------
+## General
+## ---------------------------------------------------------------
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+## ---------------------------------------------------------------
+## Editors / IDEs
+## ---------------------------------------------------------------
+.vs/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.ncrunch*
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+## ---------------------------------------------------------------
+## .NET / ASP.NET Core (api/)
+## ---------------------------------------------------------------
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+build/
+bld/
+[Ll]og/
+[Ll]ogs/
+artifacts/
+publish/
+[Pp]ublish[Oo]utput/
+*.publishsettings
+PublishScripts/
+project.lock.json
+project.fragment.lock.json
+*.nupkg
+*.snupkg
+**/packages/*
+!**/packages/build/
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
+
+# MSBuild / compiler artifacts
+*.tlog
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp_proj
+*_wpftmp.csproj
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+*.cachefile
+*.VisualState.xml
+TestResult.xml
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.coverage
+*.coveragexml
+coverage*.json
+coverage*.xml
+coverage*.info
+[Cc]overage[Rr]eport/
+
+# Local secrets / environment config
+appsettings.Development.json
+appsettings.development.json
+appsettings.Local.json
+appsettings.*.Local.json
+secrets.json
+*.pfx
+*.p12
+*.key
+*.pem
+
+## ---------------------------------------------------------------
+## Node / Angular / JavaScript (web/)
+## ---------------------------------------------------------------
+node_modules/
+jspm_packages/
+bower_components/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-store/
+.yarn/cache
+.yarn/install-state.gz
+
+# Angular build output & caches
+dist/
+tmp/
+out-tsc/
+.angular/
+.angular/cache/
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+
+# Test / coverage output
+/coverage
+coverage/
+.nyc_output/
+libpeerconnection.log
+testem.log
+/typings
+
+# Framework / bundler caches
+.cache/
+.parcel-cache/
+.vite/
+.next/
+.nuxt/
+.svelte-kit/
+.turbo/
+storybook-static/
+
+## ---------------------------------------------------------------
+## Environment files
+## ---------------------------------------------------------------
+.env
+.env.*
+!.env.example
+!.env.sample
+
+## ---------------------------------------------------------------
+## Docker / infra local state
+## ---------------------------------------------------------------
+docker-compose.override.yml
+*.local.yml
+.terraform/
+*.tfstate
+*.tfstate.*

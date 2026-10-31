@@ -1,0 +1,52 @@
+[Unit]
+Description=Quillbridge API
+After=network-online.target docker.service
+Wants=network-online.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=quillbridge
+Group=quillbridge
+WorkingDirectory=/opt/quillbridge/api
+ExecStart=/usr/bin/dotnet /opt/quillbridge/api/quillbridge.api.dll
+
+# Written by deploy/server-setup.sh from the GitHub secrets on every deploy; 0600 root:root, so the
+# service account cannot read it from disk — the values reach the process as environment only.
+EnvironmentFile=/etc/quillbridge/api.env
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=ASPNETCORE_URLS=http://127.0.0.1:5100
+Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
+
+Restart=always
+RestartSec=5
+SyslogIdentifier=quillbridge-api
+
+# Sandbox: the API writes nothing to disk (data lives in SQL Server), so the filesystem is read-only.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+InaccessiblePaths=-/var/lib/stockflow -/etc/stockflow
+UMask=0077
+CapabilityBoundingSet=
+AmbientCapabilities=
+PrivateDevices=true
+ProtectClock=true
+ProtectControlGroups=true
+ProtectHostname=true
+ProtectKernelLogs=true
+ProtectKernelModules=true
+ProtectKernelTunables=true
+ProtectProc=invisible
+RestrictNamespaces=true
+RestrictRealtime=true
+RestrictSUIDSGID=true
+LockPersonality=true
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallFilter=~@privileged
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6 AF_NETLINK
+
+[Install]
+WantedBy=multi-user.target

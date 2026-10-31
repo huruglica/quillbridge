@@ -1,0 +1,360 @@
+.muted {
+  color: var(--ink-3);
+}
+
+.ai-switch {
+  gap: 10px;
+  padding: 8px 14px 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.ai-switch > span {
+  display: grid;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+.ai-switch small {
+  font-size: 11.5px;
+  font-weight: 450;
+  color: var(--ink-3);
+}
+
+/* ------------------------------------------------------------------
+   "next up" hero: the top prospect gets its own card
+------------------------------------------------------------------- */
+.next-up {
+  position: relative;
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  text-align: left;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.next-up__glow {
+  position: absolute;
+  inset: -40% -10% auto auto;
+  z-index: -1;
+  width: 60%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-soft), transparent 65%);
+  transition: scale 0.6s var(--ease-out);
+}
+
+.next-up:hover .next-up__glow {
+  scale: 1.2;
+}
+
+.next-up__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+}
+
+.next-up__label svg {
+  width: 14px;
+  height: 14px;
+}
+
+.next-up__body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.next-up__body .avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  font-size: 16px;
+}
+
+.next-up__who {
+  flex: 1;
+  min-width: 200px;
+}
+
+.next-up__who h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.next-up__who p {
+  color: var(--ink-2);
+}
+
+.next-up__who strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.next-up__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: var(--btn);
+  color: var(--btn-ink);
+  font-weight: 600;
+  font-size: 13.5px;
+}
+
+.next-up__cta svg {
+  width: 16px;
+  height: 16px;
+  transition: translate 0.3s var(--spring);
+}
+
+.next-up:hover .next-up__cta svg:last-child {
+  translate: 2px -2px;
+}
+
+.next-up__facts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 18px;
+  font-size: 13px;
+  color: var(--ink-2);
+}
+
+.next-up__facts > span:not(.badge, .tier) {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.next-up__facts svg {
+  width: 14px;
+  height: 14px;
+  color: var(--ink-3);
+}
+
+.next-up__facts .badge svg {
+  color: inherit;
+}
+
+/* ------------------------------------------------------------------
+   row list: a grid table that folds into cards on narrow screens
+------------------------------------------------------------------- */
+.rows {
+  --cols: 44px minmax(200px, 1.6fr) minmax(170px, 1.4fr) 52px minmax(120px, 1fr) minmax(110px, 0.9fr) minmax(120px, 1fr);
+  display: grid;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: opacity 0.2s;
+}
+
+.rows.is-stale {
+  opacity: 0.6;
+}
+
+.rows--dnc {
+  --cols: minmax(200px, 1.4fr) minmax(180px, 1.2fr) minmax(200px, 1.4fr);
+}
+
+.rows__head,
+.row {
+  display: grid;
+  grid-template-columns: var(--cols);
+  align-items: center;
+  gap: 14px;
+  padding: 0 18px;
+}
+
+.rows__head {
+  height: 40px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--line);
+}
+
+.row {
+  min-height: 64px;
+  padding-block: 10px;
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.rows--dnc .row {
+  cursor: default;
+}
+
+.row:last-child {
+  border-bottom: 0;
+}
+
+.row:hover {
+  background: var(--surface-2);
+}
+
+.rows--dnc .row:hover {
+  background: none;
+}
+
+.row:focus-visible {
+  outline-offset: -2px;
+  border-radius: 0;
+}
+
+.row--skeleton {
+  cursor: default;
+}
+
+.row__rank {
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+.row__who {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+
+.row__who > span:last-child,
+.row__company,
+.row__touch {
+  display: grid;
+  min-width: 0;
+  line-height: 1.35;
+}
+
+.row strong {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.row small {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--ink-3);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.row small svg,
+.row__touch strong svg {
+  flex: none;
+  width: 12px;
+  height: 12px;
+}
+
+.row__touch strong {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.row__reason .badge {
+  height: auto;
+  min-height: 22px;
+  padding-block: 2px;
+  white-space: normal;
+}
+
+.row__score {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--ink-2);
+}
+
+.score-bar {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--surface-3);
+  overflow: hidden;
+}
+
+.score-bar span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transform-origin: left;
+}
+
+@media (max-width: 1100px) {
+  .rows {
+    --cols: 36px minmax(180px, 1.5fr) minmax(150px, 1.3fr) 44px minmax(100px, 1fr);
+  }
+
+  .rows:not(.rows--dnc) .rows__head span:nth-child(n + 6),
+  .rows:not(.rows--dnc) .row__touch,
+  .rows:not(.rows--dnc) .row__score {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .rows__head {
+    display: none;
+  }
+
+  .rows .row {
+    grid-template-columns: 1fr auto;
+    gap: 8px 12px;
+    padding: 14px 16px;
+  }
+
+  .row__rank {
+    display: none;
+  }
+
+  .row__company,
+  .row__reason {
+    grid-column: 1 / -1;
+  }
+
+  .row__trigger {
+    grid-column: 1 / -1;
+  }
+
+  .row__trigger:has(.muted) {
+    display: none;
+  }
+
+  .row__fit {
+    grid-row: 1;
+    grid-column: 2;
+  }
+}

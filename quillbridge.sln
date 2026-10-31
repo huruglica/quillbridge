@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{A594B0D7-9387-4F81-A26A-3D580B8CD5B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "quillbridge.Domain", "api\quillbridge.Domain\quillbridge.Domain.csproj", "{CAC9B428-DB6E-44C6-B4BC-FF9BE9AFE991}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "quillbridge.Application", "api\quillbridge.Application\quillbridge.Application.csproj", "{2E823E68-B2A7-421C-9184-4AD6BBC4CCC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "quillbridge.Persistence", "api\quillbridge.Persistence\quillbridge.Persistence.csproj", "{63A8B531-EBF7-4EDC-BCF1-022351AB8C9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "quillbridge.api", "api\quillbridge.api\quillbridge.api.csproj", "{AF193888-208C-4424-9DF5-3A3C7071FA0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "quillbridge.Tests", "api\quillbridge.Tests\quillbridge.Tests.csproj", "{61D85F04-89F4-4644-AEF2-685723555BBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAC9B428-DB6E-44C6-B4BC-FF9BE9AFE991}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAC9B428-DB6E-44C6-B4BC-FF9BE9AFE991}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAC9B428-DB6E-44C6-B4BC-FF9BE9AFE991}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAC9B428-DB6E-44C6-B4BC-FF9BE9AFE991}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E823E68-B2A7-421C-9184-4AD6BBC4CCC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E823E68-B2A7-421C-9184-4AD6BBC4CCC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E823E68-B2A7-421C-9184-4AD6BBC4CCC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E823E68-B2A7-421C-9184-4AD6BBC4CCC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63A8B531-EBF7-4EDC-BCF1-022351AB8C9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63A8B531-EBF7-4EDC-BCF1-022351AB8C9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63A8B531-EBF7-4EDC-BCF1-022351AB8C9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63A8B531-EBF7-4EDC-BCF1-022351AB8C9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF193888-208C-4424-9DF5-3A3C7071FA0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF193888-208C-4424-9DF5-3A3C7071FA0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF193888-208C-4424-9DF5-3A3C7071FA0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF193888-208C-4424-9DF5-3A3C7071FA0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61D85F04-89F4-4644-AEF2-685723555BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61D85F04-89F4-4644-AEF2-685723555BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61D85F04-89F4-4644-AEF2-685723555BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61D85F04-89F4-4644-AEF2-685723555BBD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CAC9B428-DB6E-44C6-B4BC-FF9BE9AFE991} = {A594B0D7-9387-4F81-A26A-3D580B8CD5B7}
+		{2E823E68-B2A7-421C-9184-4AD6BBC4CCC9} = {A594B0D7-9387-4F81-A26A-3D580B8CD5B7}
+		{63A8B531-EBF7-4EDC-BCF1-022351AB8C9F} = {A594B0D7-9387-4F81-A26A-3D580B8CD5B7}
+		{AF193888-208C-4424-9DF5-3A3C7071FA0F} = {A594B0D7-9387-4F81-A26A-3D580B8CD5B7}
+		{61D85F04-89F4-4644-AEF2-685723555BBD} = {A594B0D7-9387-4F81-A26A-3D580B8CD5B7}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,4 @@
+@host = http://localhost:5255
+
+### Swagger
+GET {{host}}/swagger/v1/swagger.json
